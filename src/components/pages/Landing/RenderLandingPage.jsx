@@ -3,6 +3,7 @@ import React from 'react';
 import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png';
 import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
 import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
+import Children from '../../../styles/Images/HRF2.png';
 import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
@@ -29,6 +30,9 @@ function RenderLandingPage(props) {
             explore USCIS data on Asylum Office decisions
           </h3>
         </div>
+        <div className="header-image">
+          <img className="children-img" src={Children} alt="" />
+        </div>
       </div>
 
       {/* Graphs Section: Add code here for the graphs section for your first ticket */}
@@ -39,7 +43,7 @@ function RenderLandingPage(props) {
         </div>
         <div className="grant-rates-by-nationality-container">
           <img src={GrantRatesByNationalityImg} alt="" className="graph-img" />
-          <p className="graph-text">Search GrantRates By Nationality</p>
+          <p className="graph-text">Search Grant Rates By Nationality</p>
         </div>
         <div className="grant-rates-over-time-container">
           <img src={GrantRatesOverTimeImg} alt="" className="graph-img" />
@@ -49,7 +53,12 @@ function RenderLandingPage(props) {
       <div className="view-more-data-btn-container">
         <Button
           type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+          style={{
+            backgroundColor: '#404C4A',
+            color: '#FFFFFF',
+            width: '170px',
+            borderRadius: '14px',
+          }}
           onClick={() => history.push('/graphs')}
         >
           View the Data
@@ -82,24 +91,25 @@ function RenderLandingPage(props) {
               <h2>36%</h2>
               <p>
                 By the end of the Trump administration, the average asylum
-                office grant rate had fallen <strong>36 percent</strong> from an
-                average of 44% in fiscal year 2016 to 28 percent in ficalyear
-                2020.
+                office grant rate had fallen{' '}
+                <span className="bold">36 percent</span> from an average of 44%
+                in fiscal year 2016 to 28 percent in ficalyear 2020.
               </p>
             </div>
             <div className="data-point-container">
               <h2>5%</h2>
               <p>
                 The New York asylum office grant rate dropped to{' '}
-                <strong>5 percent</strong> in fiscal year 2020.
+                <span className="bold">5 percent</span> in fiscal year 2020.
               </p>
             </div>
             <div className="data-point-container">
               <h2>6x Lower</h2>
               <p>
                 Between fiscal year 2017 and 2020, the New York asylum office's
-                average grant rate was <strong>six times lower</strong> than the
-                San Francisco asylum office.
+                average grant rate was{' '}
+                <span className="bold">six times lower</span> than the San
+                Francisco asylum office.
               </p>
             </div>
           </div>
@@ -107,6 +117,9 @@ function RenderLandingPage(props) {
         <p onClick={() => scrollToTop()} className="back-to-top">
           Back To Top ^
         </p>
+      </div>
+      <div className="line">
+        <hr className="solid" />
       </div>
     </div>
   );

@@ -9,7 +9,8 @@ function TableInnerSquare(props) {
     <div
       className="table-inner-square"
       style={{
-        backgroundColor: background_color,
+        backgroundColor: '#414E4C',
+        color: 'white',
         border: '1px solid lightgray',
         height: rowHeight,
         overflow: 'hidden',

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Table from './TableComponents/Table';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color } = colors;
+const { background_color, primary_accent_color } = colors;
 
 const mapStateToProps = state => {
   return {
@@ -70,7 +70,7 @@ function TimeSeriesAll(props) {
             ],
             title: 'Fiscal Year',
           },
-          paper_bgcolor: background_color,
+          paper_bgcolor: primary_accent_color,
           hoverlabel: {
             bordercolor: background_color,
           },

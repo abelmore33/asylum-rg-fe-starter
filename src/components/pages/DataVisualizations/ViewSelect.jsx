@@ -3,7 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { Button } from 'antd';
 import { colors } from '../../../styles/data_vis_colors';
 
-const { background_color } = colors;
+const { background_color, primary_accent_color } = colors;
 
 function ViewSelect(props) {
   const history = useHistory();
@@ -17,7 +17,7 @@ function ViewSelect(props) {
     <div
       className="view-select-container"
       style={{
-        backgroundColor: background_color,
+        backgroundColor: '#414E4C',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',

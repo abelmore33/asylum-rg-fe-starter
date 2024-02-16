@@ -162,7 +162,7 @@ function YearLimitsSelect(props) {
             htmlType="submit"
             data-testid="filter"
             style={{
-              backgroundColor: primary_accent_color,
+              backgroundColor: '#414E4C',
               color: 'white',
               marginLeft: '105px',
               marginTop: '10px',
@@ -175,7 +175,7 @@ function YearLimitsSelect(props) {
       <Button
         style={{
           width: '122px', // this is to match the width of the Form.Item button
-          backgroundColor: primary_accent_color,
+          backgroundColor: '#414E4C',
           color: 'white',
           marginLeft: '105px',
         }}

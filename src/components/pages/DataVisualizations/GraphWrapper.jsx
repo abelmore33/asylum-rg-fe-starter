@@ -16,7 +16,7 @@ import test_data from '../../../data/test_data.json';
 import { colors } from '../../../styles/data_vis_colors';
 import ScrollToTopOnMount from '../../../utils/scrollToTopOnMount';
 
-const { background_color } = colors;
+const { background_color, primary_accent_color } = colors;
 
 function GraphWrapper(props) {
   const { set_view, dispatch } = props;
@@ -119,7 +119,7 @@ function GraphWrapper(props) {
         alignItems: 'flex-start',
         justifyContent: 'center',
         minHeight: '50px',
-        backgroundColor: background_color,
+        backgroundColor: primary_accent_color,
       }}
     >
       <ScrollToTopOnMount />

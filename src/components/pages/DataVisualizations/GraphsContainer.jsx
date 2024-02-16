@@ -7,7 +7,7 @@ import { Select } from 'antd';
 import { colors } from '../../../styles/data_vis_colors';
 
 const { Option } = Select;
-const { background_color } = colors;
+const { background_color, primary_accent_color } = colors;
 
 function GraphsContainer() {
   const [view, set_view] = useState('time-series');
@@ -123,7 +123,7 @@ function GraphsContainer() {
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        backgroundColor: background_color,
+        backgroundColor: primary_accent_color,
       }}
     >
       <div

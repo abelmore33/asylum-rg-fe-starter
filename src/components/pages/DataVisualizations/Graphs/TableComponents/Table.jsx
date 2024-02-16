@@ -31,8 +31,8 @@ function Table(props) {
             <div
               className="column-id"
               style={{
-                backgroundColor: primary_accent_color,
-                border: '1px solid black',
+                backgroundColor: '#414E4C',
+                border: '1px solid white',
                 color: 'white',
                 width: '100%',
                 overflow: 'hidden',

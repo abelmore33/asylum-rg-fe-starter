@@ -53,6 +53,7 @@ function GraphWrapper(props) {
     }
   }
   function updateStateWithNewData(years, view, office, stateSettingCallback) {
+    console.log(office);
     /*
           _                                                                             _
         |                                                                                 |
@@ -76,20 +77,42 @@ function GraphWrapper(props) {
     */
 
     if (office === 'all' || !office) {
-      axios
-        .get(`${process.env.REACT_APP_Real_Production_URL}/fiscalSummary`, {
-          // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-          params: {
-            from: years[0],
-            to: years[1],
-          },
-        })
-        .then(result => {
-          stateSettingCallback(view, office, [result.data]); // <-- `test_data` here can be simply replaced by `result.data` in prod!
-        })
-        .catch(err => {
-          console.error(err);
-        });
+      if (view === 'time-series' || view === 'office-heat-map`') {
+        axios
+          .get(`${process.env.REACT_APP_Real_Production_URL}/fiscalSummary`, {
+            // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
+            params: {
+              from: years[0],
+              to: years[1],
+            },
+          })
+          .then(result => {
+            stateSettingCallback(view, office, [result.data]); // <-- `test_data` here can be simply replaced by `result.data` in prod!
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      } else {
+        axios
+          .get(
+            `${process.env.REACT_APP_Real_Production_URL}/citizenshipSummary`,
+            {
+              // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
+              params: {
+                from: years[0],
+                to: years[1],
+              },
+            }
+          )
+          .then(result => {
+            let data = { yearResults: [], citizenshipResults: result.data };
+
+            stateSettingCallback(view, office, [data]); // <-- `test_data` here can be simply replaced by `result.data` in prod!
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      }
     } else {
       axios
         .get(`${process.env.REACT_APP_Real_Production_URL}/fiscalSummary`, {

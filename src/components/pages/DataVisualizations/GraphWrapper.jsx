@@ -53,7 +53,8 @@ function GraphWrapper(props) {
     }
   }
   function updateStateWithNewData(years, view, office, stateSettingCallback) {
-    console.log(office);
+    console.log(view, office);
+
     /*
           _                                                                             _
         |                                                                                 |
@@ -77,7 +78,7 @@ function GraphWrapper(props) {
     */
 
     if (office === 'all' || !office) {
-      if (view === 'time-series' || view === 'office-heat-map`') {
+      if (view === 'time-series' || view === 'office-heat-map') {
         axios
           .get(`${process.env.REACT_APP_Real_Production_URL}/fiscalSummary`, {
             // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!

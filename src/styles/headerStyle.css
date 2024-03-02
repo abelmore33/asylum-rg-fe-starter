@@ -1,6 +1,6 @@
 .links {
   font-size: 1.3rem;
-  width: 500px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +60,12 @@
 }
 
 .profile-img {
-  margin-top: 35px;
   height: 75px;
   width: 45px;
+}
+
+.btn,
+.btn-primary {
+  background-color: #707070 !important;
+  border: none !important;
 }

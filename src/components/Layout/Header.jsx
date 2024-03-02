@@ -37,12 +37,15 @@ function HeaderContent() {
         <Link to="/">Home</Link>
         <Link to="/graphs">Graphs</Link>
         {!isLoading && !user && (
-          <button className="login-btn" onClick={() => loginWithRedirect()}>
+          <button
+            className="btn btn-primary"
+            onClick={() => loginWithRedirect()}
+          >
             Login
           </button>
         )}
         {!isLoading && user && (
-          <button className="logout-btn" onClick={() => logout()}>
+          <button className="btn btn-primary" onClick={() => logout()}>
             Logout
           </button>
         )}

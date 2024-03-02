@@ -9,25 +9,14 @@ const Profile = () => {
   };
   return (
     <div className="profile-container" style={style}>
-      <div className="row align-items-center profile-header">
-        <div className="col-md-2 mb-3">
-          <img
-            src={picture}
-            alt="Profile"
-            className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
-          />
-        </div>
-        <div className="col-md text-center text-md-left">
-          <label style={{ marginTop: '20px' }} htmlFor="name">
-            Username:
-            <h2 id="name">{name}</h2>
-          </label>
-          <label htmlFor="email">
-            Email:
-            <p className="lead text-muted" id="email">
-              {email}
-            </p>
-          </label>
+      <h1 style={{ textAlign: 'center' }}>Profile</h1>
+      <div class="card" style={{ width: '18rem' }}>
+        <img class="card-img-top" src={picture} alt="Card image cap" />
+        <div class="card-body text-center">
+          <h3>Username</h3>
+          <h5 class="card-title">{name}</h5>
+          <h3 class="card-text">Email</h3>
+          <p class="card-text">{email}</p>
         </div>
       </div>
     </div>
